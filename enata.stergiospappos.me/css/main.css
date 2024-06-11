@@ -1,0 +1,113 @@
+
+ /* General Fixes*/
+.hero-image {
+  max-height: 900px;
+}
+.rotate-45 {
+  transform: rotate(45deg);
+}
+.cta-image {
+  max-height: 600px;
+}
+.logo {
+  max-width: 120px;
+}
+
+
+@media (max-width: 576px) {
+  .navbar-burger {
+    display: block;
+  }}
+
+  @media (min-width: 992px) {
+    .navbar-burger {
+      display: none;
+    }}
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 4rem;
+      }
+    }
+  
+
+
+/* Fluid Typography */
+
+.text-h1 {
+  font-size: clamp(
+    2.875rem,
+    calc(2.875rem + ((1vw - 0.25875rem) * 1.7544)),
+    4rem
+  );
+  min-height: 0vw;
+  line-height: 1.4;
+}
+
+.text-h2 {
+  font-size: clamp(
+    1.875rem,
+    calc(1.875rem + ((1vw - 0.25875rem) * 2.5341)),
+    3.5rem
+  );
+  min-height: 0vw;
+  line-height: 1.29em;
+}
+
+.text-h3 {
+  font-size: clamp(24px, calc(1.5rem + ((1vw - 4.14px) * 1.1696)), 36px);
+  min-height: 0vw;
+  line-height: 1.2em;
+}
+
+.text-medium {
+  font-size: clamp(14px, calc(0.875rem + ((1vw - 4.14px) * 0.1949)), 16px);
+  min-height: 0vw;
+  line-height: 1.3em;
+}
+
+.text-large {
+  font-size: clamp(16px, calc(1rem + ((1vw - 4.14px) * 0.7797)), 24px);
+  min-height: 0vw;
+  line-height: 1.17;
+}
+
+.text-paragraph{
+  font-size: clamp(1rem, 0.9712rem + 0.1282vw, 1.125rem);
+  line-height: clamp(1.5rem, 1.3846rem + 0.5128vw, 2rem);
+}
+
+ /*Smooth Scroll Library CSS*/
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+
+@media only screen and (max-width:1200px){
+  #nav05 > div > a.btn.btn-sm.btn-link.fw-semibold.border.me-2.border-dark{
+      display: none!important;
+  }}
+ 
+ /*Accesibility Fixes*/
+footer .form-control::placeholder{
+    color: white!important;
+}
+
+body > main > section.position-relative.py-24{
+    background-color: #000!important;
+}
